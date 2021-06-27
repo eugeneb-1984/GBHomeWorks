@@ -24,13 +24,11 @@ namespace Task4_1
             GetFullName(ivanFirstName, ivanLastName, ivanPatronymic);
             GetFullName(petrFirstName, petrLastName, petrPatronymic);
             GetFullName(andreyFirstName, andreyLastName, andreyPatronymic);
-         
+        }
 
-            static void GetFullName(string firstName, string lastName, string patronymic)
-
-            {
-                Console.WriteLine($"{firstName} {patronymic} {lastName}");
-            }
+        static void GetFullName(string firstName, string lastName, string patronymic)
+        {
+            Console.WriteLine($"{firstName} {patronymic} {lastName}");
         }
     }
 }
