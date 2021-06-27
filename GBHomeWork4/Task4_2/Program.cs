@@ -11,27 +11,27 @@ namespace Task4_2
             Console.WriteLine($"Посчитанная сумма: {GetSumByNumbers(stringOfNumbers)}");
             Console.WriteLine("Нажмите любую клавишу чтобы закрыть программу");
             Console.ReadKey();
+        }
 
-            static int GetSumByNumbers(string stringOfNumbers)
+        static int GetSumByNumbers(string stringOfNumbers)
+        {
+            int sum = 0;
+            foreach (var number in stringOfNumbers.Split(' '))
             {
-                int sum = 0;
-                foreach (var number in stringOfNumbers.Split(' '))
+                int num;
+                if (int.TryParse(number, out num))
                 {
-                    int num;
-                    if (int.TryParse(number, out num))
-                    {
-                        sum +=num; 
-                    }
-
-                    else
-                    {
-                        Console.WriteLine("Некорректный ввод. Убедитесь, что все введённые значения являются числами и введены именно через пробел.");
-                        sum = 0;
-                        break;
-                    }
+                    sum +=num; 
                 }
-                return sum;
+
+                else
+                {
+                    Console.WriteLine("Некорректный ввод. Убедитесь, что все введённые значения являются числами и введены именно через пробел.");
+                    sum = 0;
+                    break;
+                }
             }
+            return sum;
         }
     }
 }
