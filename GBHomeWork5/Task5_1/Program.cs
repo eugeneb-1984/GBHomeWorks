@@ -11,7 +11,7 @@ namespace Task5_1
             var input = Console.ReadLine();
             string filename = "input.txt";
             File.AppendAllText(filename, input);
-            Console.WriteLine($"Спасибо, текст записан в файл {filename}");
+            Console.WriteLine($"Спасибо, текст записан в файл {filename}. Для закрытия нажмите любую клавишу.");
             Console.ReadKey();
         }
     }
